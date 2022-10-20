@@ -5,3 +5,54 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin: 20px;
+}
+
+header h1{
+    font-size: 40px;
+}
+
+#gioca{
+    padding: 2px 10px;
+}
+
+main{
+    background-color: #7FFFD4;
+    height: calc(90vh - 20px);
+    display: flex;
+    padding-top: 10px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+}
+
+.square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer p{
+    margin-left: 10px;
+}
