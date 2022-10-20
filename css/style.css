@@ -28,7 +28,6 @@ header h1{
 main{
     background-color: #7FFFD4;
     height: calc(90vh - 20px);
-    display: flex;
     padding-top: 10px;
 }
 
