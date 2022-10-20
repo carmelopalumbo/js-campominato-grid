@@ -61,6 +61,7 @@ main{
 .square_click{
     background-color: rgb(59, 59, 209);
     color: white;
+    transition: all .5s;
 }
 
 footer p{
