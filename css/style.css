@@ -28,7 +28,7 @@ header h1{
 main{
     background-color: #7FFFD4;
     height: calc(90vh - 20px);
-    padding-top: 10px;
+    padding: 10px 0;
 }
 
 .container{
@@ -50,6 +50,11 @@ main{
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.square_click{
+    background-color: rgb(59, 59, 209);
+    color: white;
 }
 
 footer p{

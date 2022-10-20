@@ -9,14 +9,15 @@ Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro e
 //variabili
 const container = document.querySelector('.container');
 const numCaselle = 100;
+const inputBtn = document.getElementById('gioca');
 
 
-//ciclo for per generare i quadratini
-for(let i = 0; i < numCaselle; i++){
-    squareGenerator(i);
-}
-
-
+inputBtn.addEventListener('click', function(){
+    //ciclo for per generare i quadratini
+    for(let i = 0; i < numCaselle; i++){
+        squareGenerator(i);
+    }
+})
 
 
 
@@ -24,14 +25,23 @@ for(let i = 0; i < numCaselle; i++){
 
 // funzioni
 
+//crea quadrati
 function squareGenerator(indexSquare){
     const square = document.createElement('div');
     square.classList.add('square');
     container.append(square);
     square.style.width = genCssClass();
     square.style.height = genCssClass();
+    square.innerHTML = indexSquare + 1;
+    square.addEventListener('click', clickSquare);
 }
 
+//imposta dimemensioni in base alla quantita
 function genCssClass(){
-    return `calc(100% / ${numCaselle})`;
+    return `calc(100% / ${Math.sqrt(numCaselle)})`;
+}
+
+//cambia colore del quadrato al click
+function clickSquare(){
+    this.classList.add('square_click');
 }
