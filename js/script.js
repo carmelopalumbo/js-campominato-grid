@@ -8,23 +8,24 @@ Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro e
 
 //variabili
 const container = document.querySelector('.container');
-const numCaselle = 100;
+const numCaselle = document.getElementById('difficult');
 const inputBtn = document.getElementById('gioca');
 const resetBtn = document.getElementById('reset');
 
 
 inputBtn.addEventListener('click', function(){
     //ciclo for per generare i quadratini
-    for(let i = 0; i < numCaselle; i++){
+    container.innerHTML = '';
+    for(let i = 0; i < numCaselle.value; i++){
         squareGenerator(i);
     }
 })
 
 resetBtn.addEventListener('click', function(){
+    //cancella tutta la griglia
+    numCaselle.value = '';
     container.innerHTML = '';
 })
-
-
 
 
 
@@ -43,7 +44,7 @@ function squareGenerator(indexSquare){
 
 //imposta dimemensioni in base alla quantita
 function genCssClass(){
-    return `calc(100% / ${Math.sqrt(numCaselle)})`;
+    return `calc(100% / ${Math.sqrt(numCaselle.value)})`;
 }
 
 //cambia colore del quadrato al click

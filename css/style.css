@@ -22,7 +22,8 @@ header h1{
 }
 
 #gioca,
-#reset{
+#reset,
+#difficult{
     padding: 2px 10px;
 }
 
