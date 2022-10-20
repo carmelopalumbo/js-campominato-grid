@@ -10,6 +10,7 @@ Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro e
 const container = document.querySelector('.container');
 const numCaselle = 100;
 const inputBtn = document.getElementById('gioca');
+const resetBtn = document.getElementById('reset');
 
 
 inputBtn.addEventListener('click', function(){
@@ -17,6 +18,10 @@ inputBtn.addEventListener('click', function(){
     for(let i = 0; i < numCaselle; i++){
         squareGenerator(i);
     }
+})
+
+resetBtn.addEventListener('click', function(){
+    container.innerHTML = '';
 })
 
 
