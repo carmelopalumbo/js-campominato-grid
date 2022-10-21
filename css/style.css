@@ -32,7 +32,7 @@ header h1{
 }
 
 main{
-    background-color: #7FFFD4;
+   background-image: linear-gradient(to right top, #052837, #035869, #0f8d96, #3fc5ba, #7fffd4);
     height: calc(90vh - 20px);
     padding: 10px 0;
 }
